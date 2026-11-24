@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Nikita (Cutie)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Caveat:wght@600;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <audio id="bgAudio" preload="auto" loop>
+    <source src="aud.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="sky">
+    <div class="stars" id="starField" aria-hidden="true"></div>
+    <div class="fireflies" id="fireflyField" aria-hidden="true"></div>
+    <div class="moon" aria-hidden="true"></div>
+
+    <main class="hero">
+      <p class="eyebrow">a little wish, just for you</p>
+
+      <h1 class="headline">
+        <span class="line line-1" id="line1"></span>
+        <span class="line line-2">Nikita (Cutie)</span>
+      </h1>
+
+      <div class="locket">
+        <div class="locket-string"></div>
+        <div class="locket-frame">
+          <img src="photo.jpeg" alt="Nikita">
+        </div>
+      </div>
+
+      <button id="lanternBtn" class="lantern-btn">
+        <span class="lantern-icon">🏮</span>
+        <span>release the lantern</span>
+      </button>
+
+      <p class="hint">tap the lantern to open your letter</p>
+      <a class="scroll-cue" href="#memories" aria-label="See our memories">
+        <span>Your little memories</span>
+        <span class="scroll-cue-arrow">&#8595;</span>
+      </a>
+    </main>
+  </div>
+
+  <section class="memories" id="memories">
+    <div class="stars" id="starField2" aria-hidden="true"></div>
+    <p class="memories-eyebrow">a few frames I never want to forget</p>
+    <h2 class="memories-title">moments of you</h2>
+    <div class="memories-strip" id="memoriesStrip">
+      <figure class="polaroid-card" style="--r:-5deg;"><img src="./m1.jpg" alt="Memory with Nikita" loading="lazy"></figure>
+      <figure class="polaroid-card" style="--r:4deg;"><img src="./m2.jpg" alt="Memory with Nikita" loading="lazy"></figure>
+      <figure class="polaroid-card" style="--r:-3deg;"><img src="./m3.jpg" alt="Memory with Nikita" loading="lazy"></figure>
+      <figure class="polaroid-card" style="--r:5deg;"><img src="./m4.jpg" alt="Memory with Nikita" loading="lazy"></figure>
+      <figure class="polaroid-card" style="--r:-4deg;"><img src="./m5.jpg" alt="Memory with Nikita" loading="lazy"></figure>
+      <figure class="polaroid-card" style="--r:3deg;"><img src="./m6.jpg" alt="Memory with Nikita" loading="lazy"></figure>
+    </div>
+    <p class="memories-note">tap any photo to see it up close</p>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close photo">&times;</button>
+    <img id="lightboxImg" src="" alt="Memory with Nikita">
+  </div>
+
+  <div class="letter-overlay" id="letterOverlay">
+    <button class="close-btn" id="closeLetter" aria-label="Close letter">&times;</button>
+    <div class="scroll">
+      <div class="scroll-cap scroll-cap-top"></div>
+      <div class="scroll-paper">
+        <div class="polaroid">
+          <span class="tape"></span>
+          <img src="photo.jpeg" alt="Nikita">
+        </div>
+        <h2 class="to-line">To Nikita (Cutie) <span class="heart">♥</span></h2>
+        <p class="letter-date">25 November</p>
+        <p class="letter-body" id="letterBody"></p>
+        <div class="seal">✦</div>
+      </div>
+      <div class="scroll-cap scroll-cap-bottom"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
